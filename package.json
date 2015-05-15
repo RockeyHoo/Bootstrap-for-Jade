@@ -1,0 +1,11 @@
+{
+    "name": "wechat-mp-web",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "express": "3.2.4",
+        "express-sledge": "0.0.1",
+        "mssql": "0.5.x",
+        "jade": "0.30.0"
+    }
+}

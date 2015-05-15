@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    div.container
+        div.jumbotron
+            h4 MediaList:
+            table.table.table-striped.table-bordered.table-hover.table-responsive(style="text-align:left;")
+                tr
+                    th Date
+                    th Type
+                    th MediaID
+                    th CreateAt
+                    th Path
+            for event in data
+                tr
+                    td #{event.date}
+                    td #{event.type}
+                    td #{event.media_id}
+                    td #{event.created_at}
+                    td #{event.created_at}
+                    td #{event.path}
