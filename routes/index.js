@@ -24,12 +24,27 @@ exports.listMedia = function (req, res) {
     var connection = new sql.Connection(config, function (err) {
         var request = new sql.Request(connection);
         request.query(qry, function (err, data) {
-            console.log("query Date =>" + data);
-            res.render('listMedia', {title: 'Home', id: 'listMedia', data: data, brand: brand, copyright: copyright})
+            res.render('listMedia', {title: 'Home', id: '/listMedia', data: data, brand: brand, copyright: copyright})
+        });
+    });
+};
+
+exports.view = function (req, res) {
+    var id = req.params.id;
+    var qry = "select * from wechat_medias where id=" + id;
+    console.log("sql = " + qry);
+    var connection = new sql.Connection(config, function (err) {
+        var request = new sql.Request(connection);
+        request.query(qry, function (err, list) {
+            res.render('view', {title: 'Home', id: '/listMedia', data: list[0], brand: brand, copyright: copyright})
         });
     });
 };
 
 exports.about = function (req, res) {
-    res.render('about', {title: 'About', id: 'about', brand: brand, copyright: copyright})
+    res.render('about', {title: 'About', id: '/about', brand: brand, copyright: copyright})
+};
+
+exports.theme2 = function (req, res) {
+    res.render('theme2', {title: 'About', id: '/about', brand: brand, copyright: copyright})
 };

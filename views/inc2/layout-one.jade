@@ -1,0 +1,28 @@
+doctype html
+html
+    include header
+
+        .page
+            .page-container
+                .container
+                    .row
+                        .span3.main-side-menu#sidebar-nav
+                            .sidebar
+                                ul.col-nav
+                                    li
+                                        a.accordion-toggle.left-nav(href='#sale', data-parent='#sidebar-nav', data-toggle='collapse')
+                                            i.pull-left.icon-chevron-right
+                                            | 抢购平台
+                                    li#sale.collapse
+                                        ul
+                                            li
+                                                a(href='/sale/init')
+                                                    i.pull-right.icon-plus-sign
+                                                    | 抢购团单录入
+                                                a(href='#')
+                                                    i.pull-right.icon-list
+                                                    | 抢购平台配置
+                        .span9.main-content
+                            block content
+
+    include footer

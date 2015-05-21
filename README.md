@@ -17,5 +17,5 @@ Configuration can be done by modifying the *app.js* & *routes/index.js* files.
 
 The footer can be modified by changing *views/inc/footer.jade*.
 
-node app.js
+	node app.js
 

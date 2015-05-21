@@ -1,0 +1,34 @@
+extends layout
+
+block content
+    div.container
+        div.jumbotron(style="overflow:auto;font-size:14px;")
+            h4 MediaInfo:
+            form.form-horizontal.bordered(method="post",action="/save")
+                .input-group
+                    label.input-group-addon Date        :
+                    span.form-control #{data.date}
+
+                .input-group
+                    label.input-group-addon Type        :
+                    span.form-control #{data.type}
+
+                .input-group
+                    label.input-group-addon MediaID:
+                    span.form-control #{data.media_id}
+
+                .input-group
+                    label.input-group-addon CreateAt:
+                    span.form-control #{data.created_at}
+
+                .input-group
+                    label.input-group-addon Path        :
+                    span.form-control #{data.path}
+
+                .form-submit
+                    a.btn.btn-primary.btn-sm(href="#") 编辑
+                    &nbsp;&nbsp;
+                    a.btn.btn-info.btn-sm(href="/listMedia") 返回
+
+
+
