@@ -1,91 +1,103 @@
 head
     meta(charset='utf8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content='运营自助平台')
+    meta(name='author', content='jinfa.deng')
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    title 运营平台
-    link(rel='stylesheet', href='/theme2/s/css/theme/css/bootstrap.css')
-    link(rel='stylesheet', href='/theme2/s/css/theme/css/bootstrap-responsive.css')
-    link(rel='stylesheet', href='/theme2/s/css/theme/css/font.css')
-    link(rel='stylesheet', href='/theme2/s/css/theme/css/theme2/styles.css')
-    link(rel='stylesheet', href='/theme2/s/css/theme/css/toastr.css')
-    link(rel='stylesheet', href='/theme2/s/css/theme/css/dpmetro.css')
-    link(rel='stylesheet', href='/theme2/s/css/op/dpupload/dpupload.css')
-    script(src='/theme2/s/js/op/lib/dpupload/theme2/swfupload.js')
-    script(src='/theme2/s/js/op/lib/dpupload/theme2/swfupload.speed.js')
-    script(src='/theme2/s/js/op/lib/dpupload/theme2/swfupload.cookies.js')
-    script(src='/theme2/s/js/op/lib/dpupload/progressbar.js')
-    script(src='/theme2/s/js/op/lib/dpupload/dpupload.js')
-    script(src='/theme2/s/js/op/lib/theme2/seajs.js')
-    script(src='/theme2/s/js/op/lib/header.js')
-
+    title 运营自助平台
+    link(rel='stylesheet', href='/s/css/theme/css/bootstrap.css')
+    link(rel='stylesheet', href='/s/css/theme/css/bootstrap-responsive.css')
+    link(rel='stylesheet', href='/s/css/theme/css/font.css')
+    link(rel='stylesheet', href='/s/css/theme/css/styles.css')
+    link(rel='stylesheet', href='/s/css/theme/css/toastr.css')
+    link(rel='stylesheet', href='/s/css/theme/css/dpmetro.css')
+    link(rel='stylesheet', href='/s/css/op/dpupload/dpupload.css')
+    link(rel='stylesheet', type='text/css', href='/s/js/op/lib/plugin/jquery-ui-11/jquery-ui.min.css')
+    link(rel='stylesheet', type='text/css', href='/s/css/op/topic/theme-setting.css')
+    script(src='/s/js/op/lib/dpupload/swfupload.js')
+    script(src='/s/js/op/lib/dpupload/swfupload.speed.js')
+    script(src='/s/js/op/lib/dpupload/swfupload.cookies.js')
+    script(src='/s/js/op/lib/dpupload/progressbar.js')
+    script(src='/s/js/op/lib/dpupload/dpupload.js')
+    script(src='/s/js/op/lib/seajs.js')
+    script(src='/s/js/op/lib/header.js')
+    script(src='/s/js/op/lib/jquery-11.js')
+    script(src='/s/js/op/lib/plugin/jquery.cookie.js')
+    script(src='/s/js/op/lib/plugin/jquery-ui-11/jquery-ui.min.js')
+    link(rel='stylesheet', type='text/css', href='/s/js/op/lib/plugin/jquery.ui.core.css')
+    link(rel='stylesheet', type='text/css', href='/s/js/op/lib/plugin/jquery.ui.theme.css')
+    link(rel='stylesheet', type='text/css', href='/s/js/op/lib/plugin/jquery.ui.datepicker.css')
+    link(rel='stylesheet', type='text/css', href='/s/js/op/lib/plugin/jquery-ui-1.9.2.custom.min.css')
+    script(src='/s/js/op/lib/plugin/jquery-ui-1.9.2.custom.min.js')
+    script(src='/s/js/op/lib/plugin/jquery-timepicker.js')
+    script(src='/s/js/op/lib/plugin/jquery.ui.datepicker-zh-CN.js')
+    script(src='/s/js/op/lib/plugin/jquery-ui-timepicker-zh-CN.js')
 body
-    div#in-nav
+    #in-nav
         .container
             .row
                 .span12
                     ul.pull-right
                         li
-                            a(href="http://op.t.51ping.com/manage/index",target="_blank") 老权限
+                            a(href='/manage/index', target='_blank') 老权限
                         li
-                            a(href="http://op.t.51ping.com/api/config",target="_blank") API Config
+                            a(href='/api/config', target='_blank') API Config
                         li
-                            a(href="http://op.t.51ping.com/moduleBlack/list",target="_blank") 团购黑名单
+                            a(href='/moduleBlack/list', target='_blank') 团购黑名单
                         li
-                            a(href="http://op.t.51ping.com/weibo/weiboDeal",target="_blank") 微博管理
+                            a(href='/weibo/weiboDeal', target='_blank') 微博管理
                         li
-                            a(href="http://op.t.51ping.com/hotel/hotelRecommendScore",target="_blank") 推荐单管理
+                            a(href='/hotel/hotelRecommendScore', target='_blank') 推荐单管理
                         li
-                            a(href="http://op.t.51ping.com/deal/dealShop",target="_blank") 商户总店
+                            a(href='/deal/dealShop', target='_blank') 商户总店
                         li
-                            a(href="http://op.t.51ping.com/theme2/shantuan/theme2/shantuanManagement",target="_blank") 闪团管理
+                            a(href='/shantuan/shantuanManagement', target='_blank') 闪团管理
                         li
-                            a(href="http://admin.t.51ping.com/giftcard/index",target="_blank") 礼品卡
+                            a(href='/giftcard/index', target='_blank') 礼品卡
                         li
-                            a(href="http://op.t.51ping.com/account/logout") 退出
+                            a(href='/account/logout') 退出
                     h4
                         strong 用户：
-                Rockey
     #in-sub-nav
         .container
             .row
                 .span12
                     .logo
-                        a(href="/index")
-                            img(src="/theme2/stylesheets/images/logo.png")
+                        a(href='/index')
+                            img(src='/s/css/op/topic/images/logo.png', alt='dianping op')
                     ul
                         li
-                            a.active(href="/index")
+                            a.active(href='/sale/')
                                 i.batch.home
                                 br
                                 | 运营活动
                         li
-                            a(href="/advertise/list")
+                            a(href='#')
                                 i.batch.stream
                                 br
                                 | 运营推广
                         li
-                            a(href="http://op.t.51ping.com/promocode/paginatePromoCode")
+                            a(href='#')
                                 i.batch.calendar
                                 br
                                 | 资源管理
                         li
-                            a(href="#")
+                            a(href='#')
                                 i.batch.plane
                                 br
                                 | 资源发放
                         li
-                            a(href="#")
+                            a(href='#')
                                 i.batch.rule
                                 br
                                 | 规则管理
                         li
-                            a(href="/portal/opuser/index")
+                            a(href='#')
                                 i.batch.users
                                 br
                                 | 权限管理
                         li
-                            a(href="#")
+                            a(href='#')
                                 i.batch.settings
                                 br
                                 | 个人设置
