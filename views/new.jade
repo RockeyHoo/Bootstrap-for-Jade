@@ -1,0 +1,59 @@
+extends layout
+
+block content
+    div.page
+        div.page-container
+            div.container
+                .row
+                    #sidebar-nav.span3.main-side-menu
+                        .sidebar
+                            ul.col-nav
+                                li
+                                    a.accordion-toggle.left-nav(href='#sale', data-parent='#sidebar-nav', data-toggle='collapse')
+                                        i.pull-left.icon-chevron-right
+                                        | 抢购平台
+                                li#sale.collapse
+                                    ul
+                                        li
+                                            a(href='/sale/init')
+                                                i.pull-right.icon-plus-sign
+                                                | 抢购团单录入
+                                            a(href='#')
+                                                i.pull-right.icon-list
+                                                | 抢购平台配置
+                    .span9.main-content
+                        h2 抢购平台
+                        .before-table
+                            .ads-position.clearfix
+                                form#actionForm(action='/sale/init', method='post')
+                                    ul.clearfix
+                                        li
+                                            label(for='') 类型：
+                                            select#select-type(name='type')
+                                                option(value='test', selected='selected') 测试
+                                                option(value='nonrepast') 非餐抢购
+                                        li
+                                            label(for='') 日期：
+                                            input#begin-date.datepicker(type='text', name='begin', placeholder='日期(选填)', value='2015-05-21', readonly='')
+                                        li
+                                            label(for='') 城市：
+                                            select#select-city.thm-selcity(name='city')
+                                                option(value='146') 枣庄
+                                    span#submit-btn.btn-yel 查找
+                        .thm-sheet
+                            h5 配置活动团单
+                            table.J_sheetTable
+                                colgroup
+                                    col(width='60')
+                                    col(width='320')
+                                    col(width='180')
+                                    col(width='180')
+                                    col(width='160')
+                                thead
+                                    tr
+                                        td 序号
+                                        td 内容标签
+                                        td 产品数
+                                        td 手动排序
+                                        td 操作
+                                tbody

@@ -46,5 +46,9 @@ exports.about = function (req, res) {
 };
 
 exports.theme2 = function (req, res) {
-    res.render('theme2', {title: 'About', id: '/about', brand: brand, copyright: copyright})
+    res.render('theme2', {title: 'About', id: '/theme', brand: brand, copyright: copyright})
+};
+
+exports.new = function (req, res) {
+    res.render('new', {title: 'new', id: '/new', brand: brand, copyright: copyright})
 };

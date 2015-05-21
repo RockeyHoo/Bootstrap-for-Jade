@@ -39,7 +39,8 @@ app.get('/', routes.index);
 app.get('/listMedia', routes.listMedia);
 app.get('/view/:id', routes.view);
 app.get('/about', routes.about);
-app.get('/theme2', routes.theme2);
+app.get('/new', routes.new);
+app.get('/theme', routes.theme2);
 
 http.createServer(app).listen(app.get('port'), function () {
     console.log("Express server listening on port " + app.get('port'));
